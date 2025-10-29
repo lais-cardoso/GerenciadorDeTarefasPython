@@ -7,11 +7,6 @@ Aplicativo simples em linha de comando para gerenciar tarefas.
 - Listar tarefas
 - Concluir tarefas
 - Remover tarefas
-
-## Execução
-```bash
-python main.py
-
 ## Teste e Erros encontrados
 
 - Adicionar tarefas
@@ -25,3 +20,8 @@ Ele não pergunta para o usuario concluiu a tarefa ou não, e o correto seria us
 
 - Remover tarefas
 Ta usando tbm try e except seria viavel usa if e else, além disso o buscador deveria ir para o remover tarefas
+
+## Execução
+```bash
+python main.py
+

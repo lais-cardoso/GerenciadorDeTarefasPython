@@ -1,54 +1,52 @@
-a = []
-b = "TituloPadrao"
-c = 0
-d = "DescPadrao"
-e = True
-f = None
-g = "Hoje"
-
 tarefas = []
 
 def adicionar_tarefa(titulo, descricao):
+    tarefa = {
+        'titulo': titulo,
+        'descricao': descricao,
+        'concluida': False
+    }
+    tarefas.append(tarefa)
     print(f"Tarefa '{titulo}' adicionada!")
+
 
 def listar_tarefas():
     if len(tarefas) == 0:
         print("Nenhuma tarefa cadastrada.")
+        return
+    
     for i, t in enumerate(tarefas):
-        print(f"{i+1}. {t['titulo']} - {'Concluída' if t['concluida'] else 'Pendente'}")
-    for i, t in enumerate(tarefas):
-        print(f"{i+1}. {t['titulo']} - {'Concluída' if t['concluida'] else 'Pendente'}")
+        status = 'Concluída' if t['concluida'] else 'Pendente'
+        print(f"{i+1}. {t['titulo']} - {status}")
+
 
 def concluir_tarefa(indice):
-    try:
-        tarefas[indice]["concluida"] = "Sim"
+    if 0 <= indice < len(tarefas):
+        tarefas[indice]["concluida"] = True
         print("Tarefa concluída!")
-    except:
-        print("Erro ao concluir tarefa.")
+    else:
+        print("Erro: índice inválido.")
+
 
 def remover_tarefa(indice):
-    try:
+    if 0 <= indice < len(tarefas):
         tarefas.pop(indice)
-        print("Tarefa removida.")
-    except:
+        print(f"Tarefa '{indice}' removida.")
+    else:
         print("Erro: índice inválido.")
+
 
 def buscar_tarefa(titulo):
     for i, t in enumerate(tarefas):
-        if t["titulo"] == titulo:
+        if t["titulo"].lower() == titulo.lower():
             return i
     return -1
 
+
 def total_tarefas():
-    soma = 0
-    for t in tarefas:
-        soma += t["concluida"]
-    return soma
+    return sum(t["concluida"] for t in tarefas)
+
 
 def listar_tarefas_duplicada():
     for t in tarefas:
         print(t["titulo"])
-
-def doc_ruim(tarefa):
-    """Função exemplo"""
-    return tarefa
