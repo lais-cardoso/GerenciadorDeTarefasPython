@@ -8,12 +8,18 @@ Aplicativo simples em linha de comando para gerenciar tarefas.
 - Concluir tarefas
 - Remover tarefas
 ## caça bugs
-"A tarefa adicionada não esta ficando salva na hora que eu tento ver a lista de tarefas não mostra nenhuma tarefa criada"
+"A tarefa adicionada não esta ficando salva na hora que eu tento 
+ver a lista de tarefas não mostra nenhuma tarefa criada" "CORRETIVA"
 
 "Não tem como saber o número da tarefa pois ela não é criada"
 
 "Linha 17 e 19 ta duplicadas"
 
+"Buscar tarefas não funcionando"
+
+"Listar tarefas totais não esta funcionando"
+
+"Tarefas duplicadas não esta funcionando"
 ## Execução
 ```bash
 python main.py

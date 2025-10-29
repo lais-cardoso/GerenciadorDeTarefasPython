@@ -6,7 +6,9 @@ def menu():
     print("2. Listar tarefas")
     print("3. Concluir tarefa")
     print("4. Remover tarefa")
-    print("5. Sair")
+    print("5. Buscar tarefa por número")
+    print("6. Total de tarefas")
+    print("7. Sair")
 
 def executar():
     while True:
@@ -22,10 +24,24 @@ def executar():
         elif opcao == "3":
             indice = int(input("Número da tarefa: ")) - 1
             concluir_tarefa(indice)
+       
         elif opcao == "4":
-            indice = int(input("Número da tarefa: ")) - 1
-            remover_tarefa(indice)
+            titulo = input("Digite o título da tarefa: ")
+            indice = buscar_tarefa(titulo)
+            if indice != -1:
+                print(f"Tarefa encontrada: {tarefas[indice]}")
+            else:
+                print("Tarefa não encontrada.")
         elif opcao == "5":
+            indice = int(input("Número da tarefa: ")) 
+            remover_tarefa(indice)
+        
+        elif opcao == "6":
+            listar_tarefas_duplicada()
+
+        
+
+        elif opcao == "7":
             print("Saindo...")
             break
         else:

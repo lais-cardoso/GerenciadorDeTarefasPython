@@ -1,7 +1,9 @@
-
+a = []
 tarefas = []
 
-
+def adicionar_tarefa(titulo, descricao):
+    tarefas.append({"titulo": titulo, "descricao": descricao, "concluida": False})
+    print(f"Tarefa '{titulo}' adicionada!")
 
 def listar_tarefas():
     if len(tarefas) == 0:
@@ -31,15 +33,17 @@ def buscar_tarefa(titulo):
     return -1
 
 def total_tarefas():
-    soma = 0
-    for t in tarefas:
-        soma += t["concluida"]
-    return soma
+    return len(tarefas)
 
 def listar_tarefas_duplicada():
+    titulos = {}
     for t in tarefas:
-        print(t["titulo"])
+        if t["titulo"] in titulos:
+            titulos[t["titulo"]] += 1
+            print(f"Título Total: {t['titulo']} (Total: {titulos[t['titulo']]})")
+        else:
+            titulos[t["titulo"]] = 1
+    for titulo, count in titulos.items():
+        if count > 1:
+            print(f"Título duplicado: {titulo} (Total: {count})")
 
-def doc_ruim(tarefa):
-    """Função exemplo"""
-    return tarefa
