@@ -2,10 +2,10 @@ from tarefas import *
 
 def menu():
     print("\n=== GERENCIADOR DE TAREFAS - TURMA TESTES E MANUTENCAO DE SOFTWARE ===")
-    print("1. Adicionar tarefa")
+    print("1. Adicionar tarefas")
     print("2. Listar tarefas")
-    print("3. Concluir tarefa")
-    print("4. Remover tarefa")
+    print("3. Concluir tarefas")
+    print("4. Remover tarefas")
     print("5. Sair")
 
 def executar():
