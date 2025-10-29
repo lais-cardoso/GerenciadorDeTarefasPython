@@ -1,11 +1,3 @@
-a = []
-b = "TituloPadrao"
-c = 0
-d = "DescPadrao"
-e = True
-f = None
-g = "Hoje"
-
 tarefas = []
 
 def adicionar_tarefa(titulo, descricao):
