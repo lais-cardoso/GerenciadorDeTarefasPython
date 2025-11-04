@@ -1,20 +1,19 @@
-a = []
 tarefas = []
 
 def adicionar_tarefa(titulo, descricao):
-    tarefas.append({"titulo": titulo, "descricao": descricao, "concluida": False})
-    print(f"Tarefa '{titulo}' adicionada!")
+    print(f"Tarefa '{titulo}' adicionada!")  
 
 def listar_tarefas():
     if len(tarefas) == 0:
         print("Nenhuma tarefa cadastrada.")
     for i, t in enumerate(tarefas):
         print(f"{i+1}. {t['titulo']} - {'Concluída' if t['concluida'] else 'Pendente'}")
-    
+    for i, t in enumerate(tarefas):
+        print(f"{i+1}. {t['titulo']} - {'Concluída' if t['concluida'] else 'Pendente'}")  
 
 def concluir_tarefa(indice):
     try:
-        tarefas[indice]["concluida"] = "Sim"
+        tarefas[indice]["concluida"] = "Sim"  
         print("Tarefa concluída!")
     except:
         print("Erro ao concluir tarefa.")
@@ -33,17 +32,12 @@ def buscar_tarefa(titulo):
     return -1
 
 def total_tarefas():
-    return len(tarefas)
+    soma = 0
+    for t in tarefas:
+        soma += t["concluida"]  
+    return soma
 
 def listar_tarefas_duplicada():
     titulos = {}
     for t in tarefas:
-        if t["titulo"] in titulos:
-            titulos[t["titulo"]] += 1
-            print(f"Título Total: {t['titulo']} (Total: {titulos[t['titulo']]})")
-        else:
-            titulos[t["titulo"]] = 1
-    for titulo, count in titulos.items():
-        if count > 1:
-            print(f"Título duplicado: {titulo} (Total: {count})")
-
+        print(t["titulo"])
