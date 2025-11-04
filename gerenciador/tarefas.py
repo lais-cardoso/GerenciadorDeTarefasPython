@@ -37,9 +37,13 @@ def listar_tarefas():
         titulo = t.get('titulo', 'Tarefa sem título')
         print(f"{i+1}. {titulo} - {status}")
     print("------------------------")
+    print(f"{i+1}. {t['titulo']} - {'Concluída' if t['concluida'] else 'Pendente'}")
+    for i, t in enumerate(tarefas):
+        print(f"{i+1}. {t['titulo']} - {'Concluída' if t['concluida'] else 'Pendente'}")  
+
 def concluir_tarefa(indice):
     try:
-        tarefas[indice]["concluida"] = "Sim"
+        tarefas[indice]["concluida"] = "Sim"  
         print("Tarefa concluída!")
     except:
         print("Erro ao concluir tarefa.")
@@ -60,13 +64,9 @@ def buscar_tarefa(titulo):
 def total_tarefas():
     soma = 0
     for t in tarefas:
-        soma += t["concluida"]
+        soma += t["concluida"]  
     return soma
 
 def listar_tarefas_duplicada():
     for t in tarefas:
         print(t["titulo"])
-
-def doc_ruim(tarefa):
-    """Função exemplo"""
-    return tarefa
