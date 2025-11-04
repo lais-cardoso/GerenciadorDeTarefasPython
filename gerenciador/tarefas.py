@@ -1,14 +1,20 @@
 tarefas = []
 
 def adicionar_tarefa(titulo, descricao):
-    print(f"Tarefa '{titulo}' adicionada!")  
+    tarefa = {
+        "titulo": titulo,
+        "descricao": descricao,
+        "concluida": False
+    }
+    tarefas.append(tarefa)
+    print(f"Tarefa '{titulo}' adicionada com sucesso!")
 
 def listar_tarefas():
     if len(tarefas) == 0:
         print("Nenhuma tarefa cadastrada.")
     for i, t in enumerate(tarefas):
-        status = 'Concluída' if t['concluida'] else 'Pendente'
-        print(f"{i+1}. {t['titulo']} - {status}")
+            status = "Concluída" if t["concluida"] else "Pendente"
+            print(f"{i+1}. {t['titulo']} - {status}")
 
 def concluir_tarefa(indice):
     try:
