@@ -1,4 +1,4 @@
-from gerenciador.tarefas import *
+from gerenciador import tarefas, usuarios, relatorios
 
 
 def menu():
