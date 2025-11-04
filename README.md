@@ -17,6 +17,9 @@ ERROS
 - linhas 48 funcao sem sentido ADAPTATIVA
 - funcoes desnecesarias de a a g nao foram utilizadas em nenhum momento ADAPTATIVA
 - linha 52 funcao inutil ADAPTATIVA
+## CORECOA
+- corrigir remover e concluir tarefa que nao estava dando erro na indice estava dando indice invalida
+- corrigir adicionar tarefa que estava adicionando mesmo os campos estando vazios
 ## Estrutura
 - `tarefas.py`: controla tarefas
 - `usuarios.py`: controla usuários
