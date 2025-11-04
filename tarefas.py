@@ -1,23 +1,22 @@
-a = []
-b = "TituloPadrao"
-c = 0
-d = "DescPadrao"
-e = True
-f = None
-g = "Hoje"
-
 tarefas = []
 
 def adicionar_tarefa(titulo, descricao):
+    tarefa_OBJ = {
+        "titulo": titulo,
+        "descricao": descricao,
+        "status": False
+    }
+    
+    tarefas.append(tarefa_OBJ)
+    
     print(f"Tarefa '{titulo}' adicionada!")
 
 def listar_tarefas():
     if len(tarefas) == 0:
         print("Nenhuma tarefa cadastrada.")
+        return
     for i, t in enumerate(tarefas):
-        print(f"{i+1}. {t['titulo']} - {'Concluída' if t['concluida'] else 'Pendente'}")
-    for i, t in enumerate(tarefas):
-        print(f"{i+1}. {t['titulo']} - {'Concluída' if t['concluida'] else 'Pendente'}")
+        print(f"{i+1}. {t['titulo']} - {'Concluida' if t['status'] == True else 'Pendente'}")
 
 def concluir_tarefa(indice):
     try:
@@ -49,6 +48,4 @@ def listar_tarefas_duplicada():
     for t in tarefas:
         print(t["titulo"])
 
-def doc_ruim(tarefa):
-    """Função exemplo"""
-    return tarefa
+

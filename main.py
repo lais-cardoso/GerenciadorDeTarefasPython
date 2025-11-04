@@ -3,10 +3,11 @@ from tarefas import *
 def menu():
     print("\n=== GERENCIADOR DE TAREFAS - TURMA TESTES E MANUTENCAO DE SOFTWARE ===")
     print("1. Adicionar tarefa")
-    print("2. Listar tarefas")
-    print("3. Concluir tarefa")
-    print("4. Remover tarefa")
-    print("5. Sair")
+    print("2. Buscar tarefa")
+    print("3. Listar tarefas")
+    print("4. Concluir tarefa")
+    print("5. Remover tarefa")
+    print("6. Sair")
 
 def executar():
     while True:
@@ -17,15 +18,19 @@ def executar():
             titulo = input("Título: ")
             descricao = input("Descrição: ")
             adicionar_tarefa(titulo, descricao)
+            
         elif opcao == "2":
-            listar_tarefas()
+            titulo = input("Título da tarefa a buscar: ")
+            buscar_tarefa(titulo)
         elif opcao == "3":
-            indice = int(input("Número da tarefa: ")) - 1
-            concluir_tarefa(indice)
+            listar_tarefas()
         elif opcao == "4":
             indice = int(input("Número da tarefa: ")) - 1
-            remover_tarefa(indice)
+            concluir_tarefa(indice)
         elif opcao == "5":
+            indice = int(input("Número da tarefa: ")) - 1
+            remover_tarefa(indice)
+        elif opcao == "6":
             print("Saindo...")
             break
         else:
