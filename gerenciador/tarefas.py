@@ -35,18 +35,15 @@ def listar_tarefas():
         # Usando 't.get' é uma prática mais segura caso o campo falte
         status = 'Concluída' if t.get('concluida') else 'Pendente'
         titulo = t.get('titulo', 'Tarefa sem título')
-        print(f"{i+1}. {titulo} - {status}")
-    print("------------------------")
-    print(f"{i+1}. {t['titulo']} - {'Concluída' if t['concluida'] else 'Pendente'}")
-    for i, t in enumerate(tarefas):
-        print(f"{i+1}. {t['titulo']} - {'Concluída' if t['concluida'] else 'Pendente'}")  
+        print(f"{i+1}. {t['titulo']} - {'Concluída' if t['concluida'] else 'Pendente'}")
+        # for i, t in enumerate(tarefas):
+
 
 def concluir_tarefa(indice):
-    try:
-        tarefas[indice]["concluida"] = "Sim"  
-        print("Tarefa concluída!")
-    except:
-        print("Erro ao concluir tarefa.")
+    if 0 <= indice < len(tarefas):
+         tarefas[indice]["concluida"] = True
+    for i, t in enumerate(tarefas):
+        print(f"{i+1}. {t['titulo']} - {'concluida' if t['concluida'] else 'pendente'} ")
 
 def remover_tarefa(indice):
     try:
