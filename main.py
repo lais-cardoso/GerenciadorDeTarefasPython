@@ -14,8 +14,8 @@ def executar():
         opcao = input("Escolha uma opção: ")
 
         if opcao == "1":
-            titulo = input("Título: ")
-            descricao = input("Descrição: ")
+            titulo = input("Por favor insira o nome da sua tarefa: ")
+            descricao = input("Faça uma breve Descrição da sua tarefa:")
             adicionar_tarefa(titulo, descricao)
         elif opcao == "2":
             listar_tarefas()
