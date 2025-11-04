@@ -1,18 +1,27 @@
 tarefas = []
 
 def adicionar_tarefa(titulo, descricao):
+<<<<<<< HEAD:tarefas.py
     tarefas.append({"titulo": titulo, "descricao": descricao, "concluida": False})
     print(f"Tarefa '{titulo}' adicionada!")
+=======
+    print(f"Tarefa '{titulo}' adicionada!")  
+>>>>>>> 735670abeacf00848ad82966fde33b91df30bcdf:gerenciador/tarefas.py
 
 def listar_tarefas():
     if len(tarefas) == 0:
         print("Nenhuma tarefa cadastrada.")
     for i, t in enumerate(tarefas):
         print(f"{i+1}. {t['titulo']} - {'Concluída' if t['concluida'] else 'Pendente'}")
+<<<<<<< HEAD:tarefas.py
+=======
+    for i, t in enumerate(tarefas):
+        print(f"{i+1}. {t['titulo']} - {'Concluída' if t['concluida'] else 'Pendente'}")  
+>>>>>>> 735670abeacf00848ad82966fde33b91df30bcdf:gerenciador/tarefas.py
 
 def concluir_tarefa(indice):
     try:
-        tarefas[indice]["concluida"] = "Sim"
+        tarefas[indice]["concluida"] = "Sim"  
         print("Tarefa concluída!")
     except:
         print("Erro ao concluir tarefa.")
@@ -33,13 +42,9 @@ def buscar_tarefa(titulo):
 def total_tarefas():
     soma = 0
     for t in tarefas:
-        soma += t["concluida"]
+        soma += t["concluida"]  
     return soma
 
 def listar_tarefas_duplicada():
     for t in tarefas:
         print(t["titulo"])
-
-def doc_ruim(tarefa):
-    """Função exemplo"""
-    return tarefa
