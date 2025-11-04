@@ -1,39 +1,47 @@
-from tarefas import *
+from gerenciador import tarefas, usuarios, relatorios
 
 def menu():
-    print("\n=== GERENCIADOR DE TAREFAS - TURMA TESTES E MANUTENCAO DE SOFTWARE ===")
-    print("1. Adicionar tarefa")
-    print("2. Buscar tarefa")
-    print("3. Listar tarefas")
-    print("4. Concluir tarefa")
-    print("5. Remover tarefa")
-    print("6. Sair")
-
-def executar():
     while True:
-        menu()
-        opcao = input("Escolha uma opção: ")
+        print("\n===== GERENCIADOR DE TAREFAS =====")
+        print("1. Adicionar tarefa")
+        print("2. Listar tarefas")
+        print("3. Concluir tarefa")
+        print("4. Remover tarefa")
+        print("5. Relatório")
+        print("6. Usuários")
+        print("0. Sair")
+
+        opcao = input("Escolha: ")
 
         if opcao == "1":
             titulo = input("Título: ")
             descricao = input("Descrição: ")
-            adicionar_tarefa(titulo, descricao)
-            
+            tarefas.adicionar_tarefa(titulo, descricao)
+
         elif opcao == "2":
-            titulo = input("Título da tarefa a buscar: ")
-            buscar_tarefa(titulo)
+            tarefas.listar_tarefas()
+
         elif opcao == "3":
-            listar_tarefas()
+            indice = int(input("Número da tarefa: "))
+            tarefas.concluir_tarefa(indice)
+
         elif opcao == "4":
-            indice = int(input("Número da tarefa: ")) - 1
-            concluir_tarefa(indice)
+            indice = int(input("Número da tarefa: "))
+            tarefas.remover_tarefa(indice)
+
         elif opcao == "5":
-            indice = int(input("Número da tarefa: ")) - 1
-            remover_tarefa(indice)
+            relatorios.gerar_relatorio()
+
         elif opcao == "6":
+            nome = input("Nome: ")
+            senha = input("Senha: ")
+            usuarios.cadastrar_usuario(nome, senha)
+            usuarios.listar_usuarios()
+
+        elif opcao == "0":
             print("Saindo...")
             break
         else:
-            print("Opção inválida!")
+            print("Opção inválida.")
 
-executar()
+menu()

@@ -20,7 +20,7 @@ def listar_tarefas():
 
 def concluir_tarefa(indice):
     try:
-        tarefas[indice]["concluida"] = "Sim"
+        tarefas[indice]["concluida"] = "Sim"  
         print("Tarefa concluída!")
     except:
         print("Erro ao concluir tarefa.")
@@ -41,7 +41,7 @@ def buscar_tarefa(titulo):
 def total_tarefas():
     soma = 0
     for t in tarefas:
-        soma += t["concluida"]
+        soma += t["concluida"]  
     return soma
 
 def listar_tarefas_duplicada():

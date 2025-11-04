@@ -1,12 +1,12 @@
-# Gerenciador de Tarefas (Python)
+# Gerenciador de Tarefas Python
 
-Aplicativo simples em linha de comando para gerenciar tarefas.
+Este projeto é um sistema simples de gerenciamento de tarefas.
 
-## Funcionalidades
-- Adicionar tarefas
-- Listar tarefas
-- Concluir tarefas
-- Remover tarefas
+## Estrutura
+- `tarefas.py`: controla tarefas
+- `usuarios.py`: controla usuários
+- `relatorios.py`: gera relatórios
+- `main.py`: menu principal
 
 # Erros
 - Função de adicionar tarefas não adiciona a lista 
@@ -16,5 +16,14 @@ Aplicativo simples em linha de comando para gerenciar tarefas.
 - Função de remover tarefa não indica qual tarefa foi removida, apenas a mensagem de que foi removida
 
 ## Execução
+### Tipos de manutenção a aplicar:
+- Corretiva: corrigir erros no código
+- Evolutiva: adicionar funcionalidades novas
+- Preventiva: melhorar código e documentação
+- Adaptativa: ajustar compatibilidade e padrões
+
+### Histórico de manutenção
+
+## Como executar
 ```bash
 python main.py
