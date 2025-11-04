@@ -10,10 +10,12 @@ def listar_tarefas():
         print("Nenhuma tarefa cadastrada.")
     for i, t in enumerate(tarefas):
         print(f"{i+1}. {t['titulo']} - {'Concluída' if t['concluida'] else 'Pendente'}")
+    for i, t in enumerate(tarefas):
+        print(f"{i+1}. {t['titulo']} - {'Concluída' if t['concluida'] else 'Pendente'}")  
 
 def concluir_tarefa(indice):
-    if 0 <= indice < len(tarefas):
-        tarefas[indice]["concluida"] = True
+    try:
+        tarefas[indice]["concluida"] = "Sim"  
         print("Tarefa concluída!")
     else:
         print("Erro ao concluir tarefa: índice inválido.")
@@ -37,3 +39,9 @@ def total_tarefas():
         if t["concluida"]:
             soma += 1
     return soma
+        soma += t["concluida"]  
+    return soma
+
+def listar_tarefas_duplicada():
+    for t in tarefas:
+        print(t["titulo"])
