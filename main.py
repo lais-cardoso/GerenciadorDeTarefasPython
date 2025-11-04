@@ -1,4 +1,5 @@
-from tarefas import *
+from gerenciador.tarefas import *
+
 
 def menu():
     print("\n=== GERENCIADOR DE TAREFAS - TURMA TESTES E MANUTENCAO DE SOFTWARE ===")
