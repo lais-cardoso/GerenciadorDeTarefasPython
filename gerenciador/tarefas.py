@@ -22,7 +22,7 @@ def concluir_tarefa(indice):
         print(f"{i+1}. {t['titulo']} - {'Concluída' if t['concluida'] else 'Pendente'}")  
 
 def concluir_tarefa(indice):
-    # Ajusta o índice pois a lista mostrada começa em 1
+ 
     indice = indice - 1
     if 0 <= indice < len(tarefas):
         tarefas[indice]["concluida"] = True
@@ -31,7 +31,7 @@ def concluir_tarefa(indice):
         print("Erro: índice inválido.")
    
 def remover_tarefa(indice):
-    # Ajusta o índice pois a lista mostrada começa em 1 
+
     indice = indice - 1
     if 0 <= indice < len(tarefas):
         tarefas.pop(indice)
