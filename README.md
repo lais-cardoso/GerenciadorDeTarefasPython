@@ -18,6 +18,7 @@ Este projeto é um sistema simples de gerenciamento de tarefas.
 # correção
 # Corrigi duplicação de listar tarefas
 # Corrigi erro na sintaxe pra concluir a tarefa 
+# corrigi erro em cadastro de usuario , antes ele estava cadastrando mesmo com os campos nulo, agora está corrigido e com mensagem de erro caso aconteça
 
 ## Execução
 ### Tipos de manutenção a aplicar:
