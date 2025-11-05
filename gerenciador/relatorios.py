@@ -1,4 +1,4 @@
-from gerenciador.tarefas import tarefas
+from gerenciador import tarefas
 
 def gerar_relatorio():
     total = len(tarefas)
