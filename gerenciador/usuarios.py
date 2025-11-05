@@ -1,8 +1,11 @@
 usuarios = []
 
 def cadastrar_usuario(nome, senha):
-    usuarios.append({"nome": nome, "senha": senha})
-    print("Usuário cadastrado!")
+    if not nome or not senha:
+        print("erro: nome e senha não pode estar vazio")
+    else:
+         usuarios.append({"nome": nome, "senha": senha})
+         listar_usuarios()
 
 def autenticar(nome, senha):
     for u in usuarios:
