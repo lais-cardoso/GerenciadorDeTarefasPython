@@ -17,20 +17,21 @@ def listar_tarefas():
         return
     for i, t in enumerate(tarefas):
         print(f"{i+1}. {t['titulo']} - {'Concluida' if t['status'] == True else 'Pendente'}")
+    print(total_tarefas_concluidas())
 
 def concluir_tarefa(indice):
-    try:
-        tarefas[indice]["concluida"] = "Sim"  
+    if indice >= 0 or indice < len(tarefas):
+        tarefas[indice]["status"] = True  
         print("Tarefa concluída!")
-    except:
-        print("Erro ao concluir tarefa.")
+        return
+    print("Erro ao concluir tarefa.")
 
 def remover_tarefa(indice):
-    try:
+    if indice >= 0 and indice < len(tarefas):
         tarefas.pop(indice)
         print("Tarefa removida.")
-    except:
-        print("Erro: índice inválido.")
+        return
+    print("Erro: índice inválido.")
 
 def buscar_tarefa(titulo):
     for i, t in enumerate(tarefas):
@@ -38,11 +39,13 @@ def buscar_tarefa(titulo):
             return i
     return -1
 
-def total_tarefas():
+def total_tarefas_concluidas():
     soma = 0
     for t in tarefas:
-        soma += t["concluida"]  
-    return soma
+        if t["status"] == True:
+            soma += 1
+    return f"Total de tarefas concluídas: {soma}"
+        
 
 def listar_tarefas_duplicada():
     for t in tarefas:
