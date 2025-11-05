@@ -15,7 +15,9 @@ Este projeto é um sistema simples de gerenciamento de tarefas.
 - Adaptativa: ajustar compatibilidade e padrões
 
 ### Histórico de manutenção
-
+-Erro de output duplicado que estava presente na linha 18 [corrigido]
+-Erro ao criar uma tarefa titulo e descrição não estão como obrigatorio[corrigido]
+-Erro 
 ## Como executar
 ```bash
 python main.py

@@ -2,6 +2,15 @@
 tarefas = []
 
 def adicionar_tarefa(titulo, descricao, concluida=False):
+
+   
+    if titulo is None or not str(titulo).strip():
+        print("Erro: o campo 'titulo' é obrigatório.")
+        return False
+    if descricao is None or not str(descricao).strip():
+        print("Erro: o campo 'descricao' é obrigatório.")
+        return False
+
     tarefa = {
         "titulo": titulo,
         "descricao": descricao,
@@ -9,6 +18,7 @@ def adicionar_tarefa(titulo, descricao, concluida=False):
     }
     tarefas.append(tarefa)
     print(f"Tarefa '{titulo}' adicionada!")
+    return True
 
 def listar_tarefas():
     if len(tarefas) == 0:

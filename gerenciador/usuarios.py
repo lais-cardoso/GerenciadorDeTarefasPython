@@ -4,13 +4,12 @@ def cadastrar_usuario(nome, senha):
     usuarios.append({"nome": nome, "senha": senha})
     print("Usuário cadastrado!")
 
-def autenticar(nome, senha):
-    for u in usuarios:
-        if u["nome"] == nome and u["senha"] == senha:
-            print("Login bem-sucedido!")
-            return True
-    print("Usuário ou senha incorretos.")
-    return False
+    if nome is None or not str(nome).strip():
+        print("Erro: o campo 'nome' é obrigatório.")
+        return False
+    if senha is None or not str(senha).strip():
+        print("Erro: o campo 'senha' é obrigatório.")
+        return False
 
 def listar_usuarios():
     print("Usuários cadastrados:")
