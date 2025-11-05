@@ -1,15 +1,16 @@
 usuarios = []
 
 def cadastrar_usuario(nome, senha):
-    usuarios.append({"nome": nome, "senha": senha})
-    print("Usuário cadastrado!")
-
     if nome is None or not str(nome).strip():
-        print("Erro: o campo 'nome' é obrigatório.")
+        print("Erro: Nome é obrigatório e não pode estar vazio!")
         return False
     if senha is None or not str(senha).strip():
-        print("Erro: o campo 'senha' é obrigatório.")
+        print("Erro: Senha é obrigatória e não pode estar vazia!")
         return False
+    
+    usuarios.append({"nome": nome, "senha": senha})
+    print("Usuário cadastrado!")
+    return True
 
 def listar_usuarios():
     print("Usuários cadastrados:")

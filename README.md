@@ -14,10 +14,10 @@ Este projeto é um sistema simples de gerenciamento de tarefas.
 - Preventiva: melhorar código e documentação
 - Adaptativa: ajustar compatibilidade e padrões
 
-### Histórico de manutenção
+### Histórico de manutenção Grupo1[Leonardo Oliveira e Robert]
 -Erro de output duplicado que estava presente na linha 18 [corrigido]
 -Erro ao criar uma tarefa titulo e descrição não estão como obrigatorio[corrigido]
--Erro 
+-Erro ao criar um usuario o nome e senha não estão como obrigatorio[corrigido]
 ## Como executar
 ```bash
 python main.py
