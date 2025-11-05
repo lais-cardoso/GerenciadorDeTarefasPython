@@ -20,4 +20,5 @@ python main.py
 - Ao tentar Concluir tarefa e Remover tarefa o codigo pede o Numero da tarefa mesmo que o numero não tenha sido pedido para ser definido em nenhum momento - Perfectiva
 - As linhas 17,18 e 19,20 no tarefas.py estão duplicadas - Preventiva
 
-- é possivel adicionar uma tarefa sem nome e descrição
+- é possivel adicionar uma tarefa sem titulo e descrição
+- é possivel adicionar um usuario sem nome e senha
