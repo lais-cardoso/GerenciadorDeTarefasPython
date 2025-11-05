@@ -20,6 +20,7 @@ ERROS
 ## CORECOA
 - corrigir remover e concluir tarefa que nao estava dando erro na indice estava dando indice invalida
 - corrigir adicionar tarefa que estava adicionando mesmo os campos estando vazios
+- corrigir erro no cadastrastro ususario que estava cadastrando com os campos em brancos 
 ## Estrutura
 - `tarefas.py`: controla tarefas
 - `usuarios.py`: controla usuários
