@@ -1,7 +1,7 @@
 usuarios = []
 
 def cadastrar_usuario(nome, senha):
-    usuarios.append({"nome": nome, "senha": senha})
+    usuarios.append({"nome": nome, "senha": senha, "tarefas": []})
     print("Usuário cadastrado!")
 
 def autenticar(nome, senha):
