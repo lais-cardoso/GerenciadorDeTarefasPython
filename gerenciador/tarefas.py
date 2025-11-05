@@ -3,6 +3,17 @@ tarefas = []
 def adicionar_tarefa(titulo, descricao):
     tarefas.append({"titulo": titulo, "descricao": descricao, "concluida": False})
     print(f"Tarefa '{titulo}' adicionada!")
+    if not titulo or not titulo.strip():
+        print("Erro: o título não pode estar vazio.")
+        return False
+    if not descricao or not descricao.strip():
+        print("Erro: a descrição não pode estar vazia.")
+        return False
+
+    titulo = titulo.strip()
+    descricao = descricao.strip()
+    tarefas.append({"titulo": titulo, "descricao": descricao, "concluida": False})
+    print(f"Tarefa '{titulo}' adicionada!")
 
 def listar_tarefas():
     if len(tarefas) == 0:
