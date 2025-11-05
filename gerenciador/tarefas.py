@@ -25,7 +25,10 @@ def listar_tarefas():
         print("Nenhuma tarefa cadastrada.")
     for i, t in enumerate(tarefas):
         print(f"{i+1}. {t['titulo']} - {'Concluída' if t['concluida'] else 'Pendente'}")
- 
+def listar_tarefas_completas():
+    for i, t in enumerate(tarefas):
+        if t["concluida"]:
+            print(f"{i+1}. {t['titulo']} - Concluída") 
 
 def concluir_tarefa(indice):
     try:

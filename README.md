@@ -15,9 +15,12 @@ Este projeto é um sistema simples de gerenciamento de tarefas.
 - Adaptativa: ajustar compatibilidade e padrões
 
 ### Histórico de manutenção Grupo1[Leonardo Oliveira e Robert]
--Erro de output duplicado que estava presente na linha 18 [corrigido]
--Erro ao criar uma tarefa titulo e descrição não estão como obrigatorio[corrigido]
--Erro ao criar um usuario o nome e senha não estão como obrigatorio[corrigido]
+-Erro de output duplicado que estava presente na linha 18 [corrigido-Leonardo]
+-Erro ao criar uma tarefa titulo e descrição não estão como obrigatorio[corrigido-Leonardo]
+-Erro ao criar um usuario o nome e senha não estão como obrigatorio[corrigido-Leonardo]
+-Erro não tem lista de tarefas completas e não estava mostrando as tarefas conluidas
+ no relatorio[corrigido-Leonardo]
+
 ## Como executar
 ```bash
 python main.py
