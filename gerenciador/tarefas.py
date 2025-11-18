@@ -21,7 +21,7 @@ def listar_tarefas():
 
 def concluir_tarefa(indice):
     try:
-        tarefas[indice]["concluida"] = "Sim"
+        tarefas[indice]["concluida"] = True
         print("Tarefa concluída!")
     except:
         print("Erro ao concluir tarefa.")
