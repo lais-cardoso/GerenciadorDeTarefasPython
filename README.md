@@ -10,17 +10,22 @@ Este projeto é um sistema simples de gerenciamento de tarefas.
 
 
 ### Histórico de manutenção
+
+# Função adicionar tarefa:
 - erro 1 :  Quando o usuario clica na primeira opção , apareçe titulo, e não por favor insira o nome da sua tarefa, ou faça uma breve descrição para sua tarefa
-- erro 2 = Quando eu tentei acessar a lista de taferas não foi listado nada
-- erro 3 Ao sair o programa não conclui a tarefa de sair 
-- erro 4 Não apareçe um numero para a solicitação na primeira opção de adicionar tarefas ,  que é importante para concluir a tarefa e para listar,
-- erro 5 a linha 19  tem o mesmo codigo da linha 17 , faz a mesma função,
+- erro 2:  a linha 19  tem o mesmo codigo da linha 17 , ocorrendo um erro de duplicidade
+
+# Função Listar tarefas:
+- erro 3 : Quando eu tentei acessar a lista de taferas não foi listado nada
+
+# Interatividade
+- erro 4: a opção 6 é utilizada para cadastrar usuarios ,mas não faz sentido utilizar algo inicial como essa opção para a colocação final da lista
 
 
 # correção
-# Corrigi duplicação de listar tarefas
-# Corrigi erro na sintaxe pra concluir a tarefa 
-# corrigi erro em cadastro de usuario , antes ele estava cadastrando mesmo com os campos nulo, agora está corrigido e com mensagem de erro caso aconteça
+- Corrigi duplicação de listar tarefas
+- Corrigi erro na sintaxe pra concluir a tarefa 
+- corrigi erro em cadastro de usuario , antes ele estava cadastrando mesmo com os campos nulo, agora está corrigido e com mensagem de erro caso aconteça
 
 ## Execução
 ### Tipos de manutenção a aplicar:
