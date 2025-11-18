@@ -16,56 +16,58 @@ Este projeto é um sistema simples de gerenciamento de tarefas.
 
 ### Histórico de manutenção
 
-GRUPO 03 / Larissa Almeida, Leonardo Macena, Pedro Gregori /
+GRUPO 03: Larissa Almeida, Leonardo Macena, Pedro Gregori 
 
-Arquivo : tarefas.java
+ARQUIVO : tarefas.py
 
-1. O código não guarda as tarefas na lista, pois a função de adicionar tarefa só mostra uma mensagem e não salva a tarefa de verdade.
+1. - Corretiva: O código não guarda as tarefas na lista, pois a função de adicionar tarefa só mostra uma mensagem e não salva a tarefa de verdade.  ✔️ Corrigido
 
-2. A função que mostra as tarefas é repetida, ou que faz o programa mostrar a mesma lista duas vezes.
+2. - Preventiva: A função que mostra as tarefas é repetida, ou que faz o programa mostrar a mesma lista duas vezes. ✔️ Corrigido
 
-3. Não existe nenhuma função para mostrar os usuários, ou seja, está faltando essa parte no código.
+3. - Evolutiva: Não existe nenhuma função para mostrar os usuários, ou seja, está faltando essa parte no código. ✔️ Corrigido
 
-4. O campo que diz se a tarefa é feito ou não usa um valor de verdadeiro ou falso, e isso deveria ser usado para facilitar o controle.
+4. - Corretiva: O campo que diz se a tarefa foi concluída, não usa um valor de verdadeiro ou falso, e isso deveria ser usado para facilitar o controle. ✔️ Corrigido
 
-5. O código usa texto ("Sim") para marcar a tarefa como concluída, mas isso pode causar confusão. O ideal é usar um valor verdadeiro ou falso.
+5. - Preventiva: O código usa texto ("Sim") para marcar a tarefa como concluída, mas isso pode causar confusão. O ideal é usar um valor verdadeiro ou falso. ✔️ Corrigido
 
-6. A função que deveria mostrar apenas as tarefas que são repetidas é mostrar todas as tarefas, mesmo que não sejam repetidas.
+6. - Preventiva: A função que deveria mostrar apenas as tarefas que são repetidas é mostrar todas as tarefas, mesmo que não sejam repetidas. ✔️ Corrigido
 
-7. Por causa disso, uma lista de tarefas repetidas não está funcionando direito e mostra tudo.
+8. - Corretiva: O código não permite realmente concluir as tarefas, pois não muda o estado delas corretamente quando tenta marcar como concluído. ✔️ Corrigido
 
-8. O código não permite realmente concluir as tarefas, pois não muda o estado delas corretamente quando tenta marcar como concluído.
+9. - CorretivaA função para remover tarefas não corrige corretamente o índice passado e, por isso, não remove a tarefa da lista como esperado. ✔️ Corrigido
 
-9. A função para remover tarefas não corrige corretamente o índice passado e, por isso, não remove a tarefa da lista como esperado.
+10. - Preventiva: O código não valida se os campos foram preenchidos, permitindo que fiquem vazios.
 
-10. O código não valida se os campos foram preenchidos, permitindo que fiquem vazios.
+11. - Evolutiva: Validação para remover tarefas quando não houve tarefas, foi observado que pede o número de tarefas mesmo não tendo nenhuma era para ser interrompido logo no começo.
+
+12. - Preventiva: Permite colocar qualquer caracter e não avisa que é permitido apenas número inteiros. 
 
 
-ARQUIVO: relatório.java
+ARQUIVO: relatório.py
 
-1. O relatório não apresenta mensagem de validação para o caso de lista vazia
+1. - Evolutiva: O relatório não apresenta mensagem de validação para o caso de lista vazia. ✔️ Corrigido
 
-2. Como as tarefas não são marcadas como concluídas no código, o relatório não mostra corretamente quais tarefas foram concluidas, comprometendo a precisão das informações exibidas para o usuário.
+2. - Preventiva: Como as tarefas não são marcadas como concluídas no código, o relatório não mostra corretamente quais tarefas foram concluidas, comprometendo a precisão das informações exibidas para o usuário. ✔️ Corrigido
 
-ARQUIVO: usuario.java
+ARQUIVO: usuario.py
 
-1. O sistema permite cadastrar o mesmo usuário várias vezes, pois não há nenhuma seleção para evitar duplicatas. 
+1. - Preventiva: O sistema permite cadastrar o mesmo usuário várias vezes, pois não há nenhuma seleção para evitar duplicatas. 
 
-2. O cadastro do usuário deve ser feito antes das tarefas, respeitando a ordem lógica e hierárquica dos processos.
+2. - Preventiva: O cadastro do usuário deve ser feito antes das tarefas, respeitando a ordem lógica e hierárquica dos processos.
 
 MELHORIAS IMPLEMENTADAS:
 
-1. Corrigida a função de adicionar tarefas para salvar realmente as tarefas.
+1. - Corretiva: Corrigida a função de adicionar tarefas para salvar realmente as tarefas. ✔️ Feito
 
-2. Strings substituídas por valores booleanos para status.
+2. - Preventiva: Strings substituídas por valores booleanos para status. ✔️ Feito
 
-3. Renomeado o campo "concluído" para "status".
+3. - Preventiva: Renomeado o campo "concluído" para "status". ✔️ Feito
 
-4. Removida a duplicidade na impressão da lista de tarefas.
+4. - Preventiva: Removida a duplicidade na impressão da lista de tarefas. ✔️ Feito
 
-5. Ajustada a verificação para concluir as tarefas corretamente.
+5. - Preventiva: Ajustada a verificação para concluir as tarefas corretamente. ✔️ Feito
 
-6. Fizemos teste de unidade em cada campo modificado
+6. Fizemos teste de unidade em cada campo modificado. ✔️ Feito
 
 ## Como executar
 ```bash
