@@ -15,13 +15,14 @@ Este projeto é um sistema simples de gerenciamento de tarefas.
 - Adaptativa: ajustar compatibilidade e padrões
 
 ### Histórico de manutenção Grupo1[Leonardo Oliveira e Robert]
+
 # Arquivo : tarefas.java
 
 -Erro de output duplicado que estava presente na linha 18 [corrigido-Leonardo]
 
 -Erro ao criar uma tarefa titulo e descrição não estão como obrigatorio[corrigido-Leonardo]
 
--Erro ao concluir tarefa[corrigido-Leonardo]
+-Erro ao concluir tarefa a tarefa não estava sendo concluida ao colocar o indice[corrigido-Leonardo]
 
 -A função de lista duplicada não estava cumprindo a sua função de encontrar tarefas duplicadas[corrigido-Leonardo]
 
