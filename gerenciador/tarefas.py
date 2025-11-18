@@ -31,32 +31,49 @@ def listar_tarefas_completas():
             print(f"{i+1}. {t['titulo']} - Concluída") 
 
 def concluir_tarefa(indice):
+    indice_real = indice - 1
     try:
-        tarefas[indice]["concluida"] = True
-        print("Tarefa concluída.")
-    except:
-        print("Erro: índice inválido.")
-
+        if 0 <= indice_real < len(tarefas):
+            tarefas[indice_real]["concluida"] = True
+            print(f"Tarefa '{tarefas[indice_real]['titulo']}' concluída!")
+        else:
+            raise IndexError 
+    except IndexError:
+        print("Erro: índice inválido. O número da tarefa deve ser maior que zero e estar na lista.")
+    except TypeError:
+        print("Erro: a entrada deve ser um número inteiro.")
 def remover_tarefa(indice):
     try:
         tarefas.pop(indice)
         print("Tarefa removida.")
     except:
         print("Erro: índice inválido.")
-
 def buscar_tarefa(titulo):
     for i, t in enumerate(tarefas):
         if t["titulo"] == titulo:
             return i
     return -1
-
 def total_tarefas():
     soma = 0
     for t in tarefas:
         soma += t["concluida"]  
     return soma
-
-def listar_tarefas_duplicada():
-    titulos = {}
+def listar_tarefas_duplicadas():
+    contagem_titulos = {}
     for t in tarefas:
-        print(t["titulo"])
+        titulo = t["titulo"]
+        contagem_titulos[titulo] = contagem_titulos.get(titulo, 0) + 1
+
+    duplicatas = []
+    
+    for titulo, count in contagem_titulos.items():
+        if count > 1:
+            duplicatas.append(titulo)
+
+    if duplicatas:
+        print("Títulos de tarefas duplicadas:")
+        for d in duplicatas:
+            print(f"- {d}")
+    else:
+        print("Nenhuma tarefa duplicada encontrada.")
+

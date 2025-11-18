@@ -15,21 +15,26 @@ Este projeto é um sistema simples de gerenciamento de tarefas.
 - Adaptativa: ajustar compatibilidade e padrões
 
 ### Histórico de manutenção Grupo1[Leonardo Oliveira e Robert]
+# Arquivo : tarefas.java
 
-
-### Lista de erros corrigidos no dia 04/11/2025
 -Erro de output duplicado que estava presente na linha 18 [corrigido-Leonardo]
 
 -Erro ao criar uma tarefa titulo e descrição não estão como obrigatorio[corrigido-Leonardo]
 
--Erro ao criar um usuario o nome e senha não estão como obrigatorio[corrigido-Leonardo]
-
--Erro não tem lista de tarefas completas e não estava mostrando as tarefas conluidas no relatorio[corrigido-Leonardo]
-
-### Lista de erros corrigidos no dia 18/11/2025
 -Erro ao concluir tarefa[corrigido-Leonardo]
 
-## Novas Funções
+-A função de lista duplicada não estava cumprindo a sua função de encontrar tarefas duplicadas[corrigido-Leonardo]
+
+# ARQUIVO: relatório.java
+-Erro não tem lista de tarefas completas e não estava mostrando as tarefas conluidas no relatorio[corrigido-Leonardo]
+
+
+# ARQUIVO: usario.java
+-Erro ao criar um usuario o nome e senha não estão como obrigatorio[corrigido-Leonardo]
+
+
+
+## MELHORIAS IMPLEMENTADAS:
 
 
 
