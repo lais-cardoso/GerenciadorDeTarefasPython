@@ -24,4 +24,4 @@ python main.py
 - é possivel adicionar um usuario sem nome e senha
 - em relatorios esta escrito "from gerenciador.tarefas import tarefas" quando deveria estar "from gerenciador import tarefas"
 - Ao tentar adicionar uma tarefa ela é duplicada
-- Em tarefas.py na linha 24 o resultado está como "Sim" quando deveria estar em boolean: True
+- Em tarefas.py na linha 24 o resultado está como "Sim" quando deveria estar em boolean: 
