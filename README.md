@@ -8,6 +8,8 @@ Este projeto é um sistema simples de gerenciamento de tarefas.
 - `relatorios.py`: gera relatórios
 - `main.py`: menu principal
 
+
+### Histórico de manutenção
 - erro 1 :  Quando o usuario clica na primeira opção , apareçe titulo, e não por favor insira o nome da sua tarefa, ou faça uma breve descrição para sua tarefa
 - erro 2 = Quando eu tentei acessar a lista de taferas não foi listado nada
 - erro 3 Ao sair o programa não conclui a tarefa de sair 
@@ -27,7 +29,7 @@ Este projeto é um sistema simples de gerenciamento de tarefas.
 - Preventiva: melhorar código e documentação
 - Adaptativa: ajustar compatibilidade e padrões
 
-### Histórico de manutenção
+
 
 ## Como executar
 ```bash
