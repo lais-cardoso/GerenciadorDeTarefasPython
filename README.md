@@ -47,7 +47,7 @@ ARQUIVO: relatório.java
 
 2. Como as tarefas não são marcadas como concluídas no código, o relatório não mostra corretamente quais tarefas foram concluidas, comprometendo a precisão das informações exibidas para o usuário.
 
-ARQUIVO: usario.java
+ARQUIVO: usuario.java
 
 1. O sistema permite cadastrar o mesmo usuário várias vezes, pois não há nenhuma seleção para evitar duplicatas. 
 
