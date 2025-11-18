@@ -32,10 +32,10 @@ def listar_tarefas_completas():
 
 def concluir_tarefa(indice):
     try:
-        tarefas[indice]["concluida"] = "Sim"  
-        print("Tarefa concluída!")
+        tarefas[indice]["concluida"] = True
+        print("Tarefa concluída.")
     except:
-        print("Erro ao concluir tarefa.")
+        print("Erro: índice inválido.")
 
 def remover_tarefa(indice):
     try:
