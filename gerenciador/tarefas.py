@@ -42,7 +42,7 @@ def buscar_tarefa(titulo):
 def total_tarefas():
     soma = 0
     for t in tarefas:
-        soma += t["concluida"]  
+        soma += t["concluida"]
     return soma
 
 def listar_tarefas_duplicada():
