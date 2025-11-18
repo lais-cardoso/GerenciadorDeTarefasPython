@@ -23,3 +23,4 @@ python main.py
 - é possivel adicionar uma tarefa sem titulo e descrição
 - é possivel adicionar um usuario sem nome e senha
 - em relatorios esta escrito "from gerenciador.tarefas import tarefas" quando deveria estar "from gerenciador import tarefas"
+- Ao tentar adicionar uma tarefa ela é duplicada

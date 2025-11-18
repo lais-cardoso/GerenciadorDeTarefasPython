@@ -1,8 +1,6 @@
 tarefas = []
 
 def adicionar_tarefa(titulo, descricao):
-    tarefas.append({"titulo": titulo, "descricao": descricao, "concluida": False})
-    print(f"Tarefa '{titulo}' adicionada!")
     if not titulo or not titulo.strip():
         print("Erro: o título não pode estar vazio.")
         return False
@@ -23,7 +21,7 @@ def listar_tarefas():
 
 def concluir_tarefa(indice):
     try:
-        tarefas[indice]["concluida"] = "Sim"  
+        tarefas[indice]["concluida"] = "Sim"
         print("Tarefa concluída!")
     except:
         print("Erro ao concluir tarefa.")
