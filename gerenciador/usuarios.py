@@ -4,9 +4,11 @@ def cadastrar_usuario(nome, senha):
     if not nome or not senha:
         print("Erro: Nome e senha não podem estar vazios!")
         return
-     
-    usuarios.append({"nome": nome, "senha": senha})
-    print("Usuário cadastrado!")
+    else:
+        usuario = {"nome": nome, "senha": senha, "concluida": False}
+        usuarios.append(usuario)
+        print("Usuário cadastrado!")
+        listar_usuarios()
 
 def autenticar(nome, senha):
     for u in usuarios:

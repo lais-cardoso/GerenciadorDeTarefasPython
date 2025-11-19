@@ -22,7 +22,7 @@ def concluir_tarefa(indice):
         print(f"{i+1}. {t['titulo']} - {'Concluída' if t['concluida'] else 'Pendente'}")  
 
 def concluir_tarefa(indice):
- 
+
     indice = indice - 1
     if 0 <= indice < len(tarefas):
         tarefas[indice]["concluida"] = True

@@ -36,7 +36,6 @@ def menu():
             nome = input("Nome: ")
             senha = input("Senha: ")
             usuarios.cadastrar_usuario(nome, senha)
-            usuarios.listar_usuarios()
 
         elif opcao == "0":
             print("Saindo...")
