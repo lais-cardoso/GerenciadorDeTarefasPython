@@ -1,4 +1,12 @@
-tarefas = []
+a = []
+b = "TituloPadrao"
+c = 0
+d = "DescPadrao"
+e = True
+f = None
+g = "Hoje"
+
+tarefas = [] # Lista global, correta!
 
 def adicionar_tarefa(titulo, descricao):
     if not titulo or not descricao:
@@ -12,7 +20,13 @@ def adicionar_tarefa(titulo, descricao):
 def listar_tarefas():
     if len(tarefas) == 0:
         print("Nenhuma tarefa cadastrada.")
+        return
+        
+    print("\n--- Lista de Tarefas ---")
     for i, t in enumerate(tarefas):
+        # Usando 't.get' é uma prática mais segura caso o campo falte
+        status = 'Concluída' if t.get('concluida') else 'Pendente'
+        titulo = t.get('titulo', 'Tarefa sem título')
         print(f"{i+1}. {t['titulo']} - {'Concluída' if t['concluida'] else 'Pendente'}")
 
 def concluir_tarefa(indice):

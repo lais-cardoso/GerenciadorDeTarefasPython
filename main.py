@@ -14,8 +14,8 @@ def menu():
         opcao = input("Escolha: ")
 
         if opcao == "1":
-            titulo = input("Título: ")
-            descricao = input("Descrição: ")
+            titulo = input("Por favor insira o nome da sua tarefa: ")
+            descricao = input("Faça uma breve Descrição da sua tarefa:")
             tarefas.adicionar_tarefa(titulo, descricao)
 
         elif opcao == "2":
