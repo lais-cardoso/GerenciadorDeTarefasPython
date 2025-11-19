@@ -15,7 +15,7 @@ ERROS
 - 4 linhas 23 26 30 e 33 estao ignorando erros e concluido mesmo estando erados :PREVENTIVA
 - linha 45 erro na soma esta somando tudo e deveria somar somente as concluidas :PREVENTIVA
 - linhas 48 funcao sem sentido :ADAPTATIVA
-- funcoes desnecesarias de a a g nao foram utilizadas em nenhum momento :ADAPTATIVA
+- funcoes desnecesarias de a a g não foram utilizadas em nenhum momento :ADAPTATIVA
 - linha 52 funcao inutil foi removida :PERFECTIVA
 
 ## Estrutura
