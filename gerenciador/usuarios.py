@@ -1,14 +1,28 @@
+from gerenciador import tarefas, relatorios
+
 usuarios = []
 
 def cadastrar_usuario(nome, senha):
+    for u in usuarios:
+        if nome == u["nome"]:
+            print("Esse nome de usuário já existe.")
+            return
+    
     usuarios.append({"nome": nome, "senha": senha, "tarefas": []})
     print("Usuário cadastrado!")
 
+
 def autenticar(nome, senha):
-    for u in usuarios:
-        if u["nome"] == nome and u["senha"] == senha:
+    
+    
+    for usuario in usuarios:
+        if usuario["nome"] == nome and usuario["senha"] == senha:
+            tarefas.user_atual = usuario
+            relatorios.user_atual = usuario
+
             print("Login bem-sucedido!")
             return True
+    
     print("Usuário ou senha incorretos.")
     return False
 
