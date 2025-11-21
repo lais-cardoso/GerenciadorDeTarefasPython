@@ -1,52 +1,88 @@
 from gerenciador import tarefas, usuarios, relatorios
 
+def login_ou_cadastro():
+    while True:
+        print("\n====== LOGIN / CADASTRO ======")
+        print("1. Login")
+        print("2. Cadastro")
+        print("0. Sair")
+
+        opcao = input("Escolha: ")
+
+        match opcao:
+
+            case "1":
+                nome = input("Usuário: ")
+                senha = input("Senha: ")
+                
+                if usuarios.autenticar(nome, senha):
+                    menu()
+            
+            case "2":
+                nome = input("Nome de usuário: ")
+                senha = input("Senha: ")
+                usuarios.cadastrar_usuario(nome, senha)
+
+            case "0":
+                print("Saindo...")
+                break
+            
+            case _:
+                print("Opção inválida")
+
 def menu():
-    nome = input("Nome de usuário: ")
-    senha = input("Senha: ")
-    
-    usuarios.cadastrar_usuario(nome, senha)
     
     while True:
         print("\n===== GERENCIADOR DE TAREFAS =====")
         print("1. Adicionar tarefa")
         print("2. Listar tarefas")
-        print("3. Concluir tarefa")
-        print("4. Remover tarefa")
-        print("5. Relatório")
-        print("6. Usuários")
+        print("3. Buscar tarefa")
+        print("4. Concluir tarefa")
+        print("5. Remover tarefa")
+        print("6. Relatório")
+        print("7. Listar usuários")
         print("0. Sair")
 
         opcao = input("Escolha: ")
 
-        if opcao == "1":
-            titulo = input("Título: ")
-            descricao = input("Descrição: ")
-            tarefas.adicionar_tarefa(titulo, descricao)
+        match opcao:
+            case "1":
+                titulo = input("Título: ")
+                descricao = input("Descrição: ")
+                tarefas.adicionar_tarefa(titulo, descricao)
 
-        elif opcao == "2":
-            tarefas.listar_tarefas()
+            case "2":
+                tarefas.listar_tarefas()
 
-        elif opcao == "3":
-            indice = int(input("Número da tarefa: "))
-            tarefas.concluir_tarefa(indice-1)
+            case "3":
+                titulo = input("Título: ")
+                tarefas.buscar_tarefa(titulo)
 
-        elif opcao == "4":
-            indice = int(input("Número da tarefa: "))
-            tarefas.remover_tarefa(indice-1)
+            case "4":
+                try:
+                    indice = int(input("Número da tarefa: "))
+                    tarefas.concluir_tarefa(indice-1)
+                except ValueError:
+                    print("Digite um valor válido.")
 
-        elif opcao == "5":
-            relatorios.gerar_relatorio()
+            case "5":
+                try:
+                    indice = int(input("Número da tarefa: "))
+                    tarefas.remover_tarefa(indice-1)
+                except ValueError:
+                    print("Digite um valor válido.")
 
-        elif opcao == "6":
-            nome = input("Nome: ")
-            senha = input("Senha: ")
-            usuarios.cadastrar_usuario(nome, senha)
-            usuarios.listar_usuarios()
+            case "6":
+                relatorios.gerar_relatorio()
 
-        elif opcao == "0":
-            print("Saindo...")
-            break
-        else:
-            print("Opção inválida.")
+            case "7":
+                usuarios.listar_usuarios()
 
-menu()
+            case "0":
+                print("Saindo...")
+                break
+
+            case _:
+                print("Opção inválida.")
+
+login_ou_cadastro()
