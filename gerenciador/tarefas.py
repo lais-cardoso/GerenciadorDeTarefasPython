@@ -1,4 +1,4 @@
-tarefas = []
+user_atual = None
 
 def adicionar_tarefa(titulo, descricao):
     tarefa_OBJ = {
@@ -7,55 +7,45 @@ def adicionar_tarefa(titulo, descricao):
         "status": False
     }
     
-    tarefas.append(tarefa_OBJ)
+    if user_atual == None:
+        print("Usuário não encontrado! ", user_atual)
+        return
     
+    user_atual["tarefas"].append(tarefa_OBJ)
     print(f"Tarefa '{titulo}' adicionada!")
 
 def listar_tarefas():
-    if len(tarefas) == 0:
+    if len(user_atual["tarefas"]) == 0:
         print("Nenhuma tarefa cadastrada.")
         return
-    for i, t in enumerate(tarefas):
-        print(f"{i+1}. {t['titulo']} - {'Concluida' if t['status'] == True else 'Pendente'}")
+        
+    for i, tarefas in enumerate(user_atual["tarefas"]):
+        print(f"{i+1}. {tarefas['titulo']} - {'Concluida' if tarefas['status'] == True else 'Pendente'}")
+
     print(total_tarefas_concluidas())
 
 def concluir_tarefa(indice):
-    if indice >= 0 or indice < len(tarefas):
-        tarefas[indice]["status"] = True  
-        print("Tarefa concluída!")
-        return
-    print("Erro ao concluir tarefa.")
+    if 0 <= indice < len(user_atual["tarefas"]):
+            user_atual["tarefas"][indice]["status"] = True  
+            print("Tarefa concluída!")
+            return
+        
+    print("Essa tarefa não existe.")
 
 def remover_tarefa(indice):
-    if indice >= 0 and indice < len(tarefas):
-        tarefas.pop(indice)
+    if 0 <= indice < len(user_atual["tarefas"]):
+        user_atual["tarefas"].pop(indice)
         print("Tarefa removida.")
         return
-    print("Erro: índice inválido.")
+    
+    print("Essa tarefa não existe.")
 
 def buscar_tarefa(titulo):
-    for i, t in enumerate(tarefas):
+    for t in user_atual["tarefas"]:
         if t["titulo"] == titulo:
-            return i
-    return -1
+            return print("Tarefa:", t["titulo"], "\nDescrição:", t["descricao"], "\nStatus:", 'Concluída' if t["status"] == True else "Pendente")
+    return print("Essa tarefa não existe.")
 
 def total_tarefas_concluidas():
-    soma = 0
-    for t in tarefas:
-        if t["status"] == True:
-            soma += 1
+    soma = sum(1 for tarefas in user_atual["tarefas"] if tarefas["status"] == True)
     return f"Total de tarefas concluídas: {soma}"
-        
-
-def listar_tarefas_duplicada():
-    for t in tarefas:
-        print(t["titulo"])
-
-<<<<<<< HEAD
-def doc_ruim(tarefa):
-    """Função exemplo"""
-    return tarefa
-    print(t["titulo"])
-=======
-
->>>>>>> origin/fix-devPedro

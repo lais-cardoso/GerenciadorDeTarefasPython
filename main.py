@@ -33,6 +33,7 @@ def login_ou_cadastro():
 def menu():
     
     while True:
+        print("Bem-vindo", tarefas.user_atual["nome"], "!")
         print("\n===== GERENCIADOR DE TAREFAS =====")
         print("1. Adicionar tarefa")
         print("2. Listar tarefas")
