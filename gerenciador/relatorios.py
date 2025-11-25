@@ -1,4 +1,5 @@
-from gerenciador import tarefas
+from gerenciador.tarefas import tarefas
+
 
 def gerar_relatorio():
     print("==== RELATÓRIO ====")
