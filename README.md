@@ -26,6 +26,10 @@ Este projeto é um sistema simples de gerenciamento de tarefas.
 
 -A função de lista duplicada não estava cumprindo a sua função de encontrar tarefas duplicadas[corrigido-Corretiva]
 
+-É utilizado "Sim" em tarefas.py o que pode acabar causando conflito[corrigido-Preventiva]
+
+-Erro na função de tarefas repetidas aonde exibia todas as tarefas em vez de mostrar somente as repetidas[corrigido-Preventiva]
+
 # ARQUIVO: relatório.java
 -Erro não tem lista de tarefas completas e não estava mostrando as tarefas conluidas no relatorio[corrigido-Corretiva]
 
