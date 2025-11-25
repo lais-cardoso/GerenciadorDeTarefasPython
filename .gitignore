@@ -1,0 +1,28 @@
+# Cache do Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual env
+venv/
+ENV/
+env/
+.venv/
+
+# Configurações locais
+.idea/
+.vscode/
+*.swp
+
+# Arquivos de build/distribuição
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Logs
+*.log
+
+# Dados sensíveis (comum)
+*.env
+.env
