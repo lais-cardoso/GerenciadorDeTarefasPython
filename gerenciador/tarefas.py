@@ -20,7 +20,7 @@ def listar_tarefas():
         return
         
     for i, tarefas in enumerate(user_atual["tarefas"]):
-        print(f"{i+1}. {tarefas['titulo']} - {'Concluida' if tarefas['status'] == True else 'Pendente'}")
+        print(f"{i+1}. {tarefas['titulo']} - {'Concluida' if tarefas['status'] == True else 'Pendente'}\nDescrição: {tarefas['descricao']}\n")
 
     print(total_tarefas_concluidas())
 
@@ -40,11 +40,23 @@ def remover_tarefa(indice):
     
     print("Essa tarefa não existe.")
 
-def buscar_tarefa(titulo):
+def buscar_tarefa(termo):
+    termo = termo.lower().strip() 
+
+    resultados = []
     for t in user_atual["tarefas"]:
-        if t["titulo"] == titulo:
-            return print("Tarefa:", t["titulo"], "\nDescrição:", t["descricao"], "\nStatus:", 'Concluída' if t["status"] == True else "Pendente")
-    return print("Essa tarefa não existe.")
+        if termo in t["titulo"].lower():
+            resultados.append(t)
+
+    if len(resultados) == 0:
+        print("Nenhuma tarefa encontrada com esse termo.")
+        return
+
+    print(f"{len(resultados)} tarefa(s) encontrada(s):\n")
+    for t in resultados:
+        print(f"Título: {t['titulo']}")
+        print(f"Descrição: {t['descricao']}")
+        print(f"Status: {'Concluída' if t['status'] else 'Pendente'}\n")
 
 def total_tarefas_concluidas():
     soma = sum(1 for tarefas in user_atual["tarefas"] if tarefas["status"] == True)

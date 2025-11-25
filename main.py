@@ -1,4 +1,8 @@
+import os 
 from gerenciador import tarefas, usuarios, relatorios
+
+def limpar_terminal():
+    os.system('cls' if os.name == 'nt' else 'clear')
 
 def login_ou_cadastro():
     while True:
@@ -31,9 +35,8 @@ def login_ou_cadastro():
                 print("Opção inválida")
 
 def menu():
-    
+    print("Bem-vindo", tarefas.user_atual["nome"], "!")
     while True:
-        print("Bem-vindo", tarefas.user_atual["nome"], "!")
         print("\n===== GERENCIADOR DE TAREFAS =====")
         print("1. Adicionar tarefa")
         print("2. Listar tarefas")
@@ -48,38 +51,106 @@ def menu():
 
         match opcao:
             case "1":
+                limpar_terminal()
+                print ("====== ADICIONAR TAREFA ======")
                 titulo = input("Título: ")
                 descricao = input("Descrição: ")
                 tarefas.adicionar_tarefa(titulo, descricao)
 
             case "2":
+                limpar_terminal()
+                print ("====== LISTA DE TAREFAS ======")
                 tarefas.listar_tarefas()
 
             case "3":
-                titulo = input("Título: ")
-                tarefas.buscar_tarefa(titulo)
+                limpar_terminal()
+                print ("====== BUSCAR TAREFA ======")
+                if len(tarefas.user_atual["tarefas"]) > 0:
+                    while True:
+                        termo = input("Digite o título (ENTER para voltar): ").strip()
+                        
+                        if termo == "":
+                            break
+                        
+                        resultado = tarefas.buscar_tarefa(termo)
+                        
+                        if resultado is not None:
+                            break
+                else:
+                    print("Nenhuma tarefa cadastrada.")
+                    continue
 
             case "4":
-                try:
-                    indice = int(input("Número da tarefa: "))
-                    tarefas.concluir_tarefa(indice-1)
-                except ValueError:
-                    print("Digite um valor válido.")
+                limpar_terminal()
+                print("====== CONCLUIR TAREFAS ======")
+
+                if len(tarefas.user_atual["tarefas"]) > 0:
+
+                    tarefas.listar_tarefas()
+
+                    while True:
+                        valor = input("Número da tarefa (0 para voltar): ")
+
+                        if valor == "0":
+                            break  
+
+                        if not valor.isdigit():
+                            print("Digite um número válido.")
+                            continue
+
+                        indice = int(valor) - 1
+
+                        if 0 <= indice < len(tarefas.user_atual["tarefas"]):
+                            tarefas.concluir_tarefa(indice)
+                            break
+                        else:
+                            print("Esse número não existe. Tente novamente.")
+
+                else:
+                    print("Nenhuma tarefa cadastrada.")
+                    continue
 
             case "5":
-                try:
-                    indice = int(input("Número da tarefa: "))
-                    tarefas.remover_tarefa(indice-1)
-                except ValueError:
-                    print("Digite um valor válido.")
+                limpar_terminal()
+                print("====== REMOVER TAREFAS ======")
+
+                if len(tarefas.user_atual["tarefas"]) > 0:
+                    
+                    tarefas.listar_tarefas()
+
+                    while True:
+                        valor = input("Número da tarefa: (0 para voltar): ")
+
+                        if valor == "0":
+                            break
+                        
+                        if not valor.isdigit():
+                            print("Digite um número válido.")
+                            continue
+
+                        indice = int(valor) - 1
+
+                        if 0 <= indice < len(tarefas.user_atual["tarefas"]):
+                            tarefas.remover_tarefa(indice)
+                            break
+                        else:
+                            print("Esse número não existe. Tente novamente.")
+                else:
+                    print("Nenhuma tarefa cadastrada.")
+                    continue
 
             case "6":
+                limpar_terminal()
+                print ("====== RELATÓRIO DE TAREFAS ======")
                 relatorios.gerar_relatorio()
 
             case "7":
+                limpar_terminal()
+                print ("====== LISTA DE USUÁRIOS ======")
                 usuarios.listar_usuarios()
 
             case "0":
+                limpar_terminal()
                 print("Saindo...")
                 break
 
