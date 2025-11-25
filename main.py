@@ -9,6 +9,8 @@ def menu():
         print("4. Remover tarefas")
         print("5. Relatório")
         print("6. Usuários")
+        print("7. Editar tarefa")
+
         print("0. Sair")
 
         opcao = input("Escolha: ")
@@ -40,6 +42,13 @@ def menu():
                 usuarios.listar_usuarios()
             else:
                 print("Cadastro não realizado devido a dados incompletos.")
+
+        elif opcao == "7":
+            indice = int(input("Número da tarefa: "))
+            novo_titulo = input("Novo título: ")
+            nova_descricao = input("Nova descrição: ")
+            tarefas.editar_tarefa(indice, novo_titulo, nova_descricao)
+
 
         elif opcao == "0":
             print("Saindo...")

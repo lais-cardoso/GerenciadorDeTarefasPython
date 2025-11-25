@@ -43,11 +43,13 @@ def concluir_tarefa(indice):
     except TypeError:
         print("Erro: a entrada deve ser um número inteiro.")
 def remover_tarefa(indice):
+    indice_real = indice - 1
     try:
-        tarefas.pop(indice)
+        tarefas.pop(indice_real)
         print("Tarefa removida.")
-    except:
+    except IndexError:
         print("Erro: índice inválido.")
+
 def buscar_tarefa(titulo):
     for i, t in enumerate(tarefas):
         if t["titulo"] == titulo:
@@ -77,3 +79,18 @@ def listar_tarefas_duplicadas():
     else:
         print("Nenhuma tarefa duplicada encontrada.")
 
+def editar_tarefa(indice, novo_titulo=None, nova_descricao=None):
+    indice_real = indice - 1
+    try:
+        tarefa = tarefas[indice_real]
+
+        if novo_titulo and novo_titulo.strip():
+            tarefa["titulo"] = novo_titulo
+
+        if nova_descricao and nova_descricao.strip():
+            tarefa["descricao"] = nova_descricao
+
+        print(f"Tarefa {indice} editada com sucesso!")
+    
+    except IndexError:
+        print("Erro: índice inválido para edição.")

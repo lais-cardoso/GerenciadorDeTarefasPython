@@ -30,6 +30,10 @@ Este projeto é um sistema simples de gerenciamento de tarefas.
 
 -Erro na função de tarefas repetidas aonde exibia todas as tarefas em vez de mostrar somente as repetidas[corrigido-Preventiva]
 
+-Adicionada função de editar tarefa, permitindo atualizar título e descrição [adicionado-Evolutiva]
+
+-Ajuste na função remover tarefa para padronizar índice baseado em 1 como o restante do sistema[ajustado-Adaptativa]
+
 # ARQUIVO: relatório.java
 -Erro não tem lista de tarefas completas e não estava mostrando as tarefas conluidas no relatorio[corrigido-Corretiva]
 
