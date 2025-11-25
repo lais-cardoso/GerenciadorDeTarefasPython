@@ -42,7 +42,7 @@ ARQUIVO : tarefas.py
 
 7. - Corretiva: A função para remover tarefas não corrige corretamente o índice passado e, por isso, não remove a tarefa da lista como esperado. ✔️ Corrigido
 
-8. - Preventiva: O código não valida se os campos foram preenchidos, permitindo que fiquem vazios.
+8. - Preventiva: O código não valida se os campos foram preenchidos, permitindo que fiquem vazios. ✔️ Corrigido
 
 9. - Corretiva: Validação para remover tarefas quando não houve tarefas, foi observado que pede o número de tarefas mesmo não tendo nenhuma era para ser interrompido logo no começo. ✔️ Corrigido
 

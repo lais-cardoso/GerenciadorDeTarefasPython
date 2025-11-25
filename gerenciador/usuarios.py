@@ -7,6 +7,9 @@ def cadastrar_usuario(nome, senha):
         if nome == u["nome"]:
             print("Esse nome de usuário já existe.")
             return
+    if nome == "" or senha == "":
+        print("Nome de usuário e senha não podem ser vazios.")
+        return
     
     usuarios.append({"nome": nome, "senha": senha, "tarefas": []})
     print("Usuário cadastrado!")

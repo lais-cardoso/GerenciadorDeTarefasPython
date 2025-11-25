@@ -16,15 +16,19 @@ def login_ou_cadastro():
         match opcao:
 
             case "1":
-                nome = input("Usuário: ")
-                senha = input("Senha: ")
+                nome = input("Usuário: ").strip()
+                senha = input("Senha: ").strip()
+                
+                if nome == "" or senha == "":
+                    print("Nome de usuário e senha não podem ser vazios.")
+                    continue
                 
                 if usuarios.autenticar(nome, senha):
                     menu()
             
             case "2":
-                nome = input("Nome de usuário: ")
-                senha = input("Senha: ")
+                nome = input("Nome de usuário: ").strip()
+                senha = input("Senha: ").strip()
                 usuarios.cadastrar_usuario(nome, senha)
 
             case "0":
@@ -53,8 +57,13 @@ def menu():
             case "1":
                 limpar_terminal()
                 print ("====== ADICIONAR TAREFA ======")
-                titulo = input("Título: ")
-                descricao = input("Descrição: ")
+                titulo = input("Título: ").strip()
+                descricao = input("Descrição: ").strip()
+                
+                if titulo == "" or descricao == "":
+                    print("Título e descrição não podem ser vazios.")
+                    continue
+                
                 tarefas.adicionar_tarefa(titulo, descricao)
 
             case "2":
