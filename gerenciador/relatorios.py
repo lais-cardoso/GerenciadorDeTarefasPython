@@ -2,7 +2,7 @@ from gerenciador.tarefas import tarefas
 
 def gerar_relatorio():
     total = len(tarefas)
-    concluidas = sum(1 for t in tarefas if t.get("concluida") == True)
+    concluidas = sum(1 for t in tarefas if t.get("status") == True)
     pendentes = total - concluidas
 
     print("==== RELATÓRIO ====")

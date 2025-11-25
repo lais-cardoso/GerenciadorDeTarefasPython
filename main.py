@@ -1,6 +1,11 @@
 from gerenciador import tarefas, usuarios, relatorios
 
 def menu():
+    nome = input("Nome de usuário: ")
+    senha = input("Senha: ")
+    
+    usuarios.cadastrar_usuario(nome, senha)
+    
     while True:
         print("\n===== GERENCIADOR DE TAREFAS =====")
         print("1. Adicionar tarefa")
@@ -23,11 +28,11 @@ def menu():
 
         elif opcao == "3":
             indice = int(input("Número da tarefa: "))
-            tarefas.concluir_tarefa(indice)
+            tarefas.concluir_tarefa(indice-1)
 
         elif opcao == "4":
             indice = int(input("Número da tarefa: "))
-            tarefas.remover_tarefa(indice)
+            tarefas.remover_tarefa(indice-1)
 
         elif opcao == "5":
             relatorios.gerar_relatorio()

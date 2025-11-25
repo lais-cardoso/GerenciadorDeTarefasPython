@@ -6,6 +6,8 @@ def cadastrar_usuario(nome, senha):
             return False
     usuarios.append({"nome": nome, "senha": senha})
     return True
+    usuarios.append({"nome": nome, "senha": senha, "tarefas": []})
+    print("Usuário cadastrado!")
 
 def autenticar(nome, senha):
     for u in usuarios:
