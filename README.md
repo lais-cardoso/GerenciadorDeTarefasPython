@@ -28,7 +28,7 @@ Este projeto é um sistema simples de gerenciamento de tarefas.
 
 -É utilizado "Sim" em tarefas.py o que pode acabar causando conflito[corrigido-Preventiva]
 
--Erro na função de tarefas repetidas aonde exibia todas as tarefas em vez de mostrar somente as repetidas[corrigido-Preventiva]
+-Erro na função de tarefas repetidas onde exibia todas as tarefas em vez de mostrar somente as repetidas[corrigido-Preventiva]
 
 -Adicionada função de editar tarefa, permitindo atualizar título e descrição [adicionado-Evolutiva]
 
