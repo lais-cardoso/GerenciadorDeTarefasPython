@@ -18,7 +18,7 @@ Este projeto é um sistema simples de gerenciamento de tarefas.
 
 # Arquivo : tarefas.java
 
--Erro de output duplicado que estava presente na linha 18 [corrigido-Corretiva]
+-Erro de output duplicado que estava presente na linha 11 [corrigido-Corretiva]
 
 -Erro ao criar uma tarefa titulo e descrição não estão como obrigatorio[corrigido-Corretiva]
 
