@@ -15,7 +15,6 @@ Este projeto é um sistema simples de gerenciamento de tarefas.
 - Adaptativa: ajustar compatibilidade e padrões
 
 ### Histórico de manutenção
-&
     1. Corretiva: Ajustar a função de concluir e deletar tarefas para seguirem o ID da tarefa na função, ao invés de seguir o índice da lista.
     2. Corretiva: Ajustar a função de criar tarefas para as tarefas criadas aparecerem na lista de tarefas.
     3. Preventiva: Remover a função duplicada de listar tarefas.
