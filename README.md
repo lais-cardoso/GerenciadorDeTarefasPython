@@ -16,6 +16,21 @@ Este projeto é um sistema simples de gerenciamento de tarefas.
 
 ### Histórico de manutenção
 
+1 Correção Corretiva: Lógica e Tipagem
+O erro mais grave estava na função total_tarefas, que tentava somar booleanos/strings, e na função concluir_tarefa, que usava uma string em vez de um valor booleano consistente.
+
+O Erro: soma += t["concluida"] falha se o valor for uma string ("Sim").
+d
+A Solução: Padronizar o status como True/False e usar a função sum() do Python, que é mais eficiente.
+
+
+2 Correção Perfectiva: Estrutura de Dados e Redundância
+O código original tinha loops duplicados e não salvava as tarefas de fato na lista global.
+
+O Erro: A função adicionar_tarefa apenas imprimia o texto, mas não dava um append na lista tarefas.
+
+A Solução: Implementar a inserção real e remover loops repetidos na listagem.
+
 ## Como executar
 ```bash
 python main.py
