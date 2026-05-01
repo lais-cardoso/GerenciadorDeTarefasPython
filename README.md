@@ -16,6 +16,24 @@ Este projeto é um sistema simples de gerenciamento de tarefas.
 
 ### Histórico de manutenção
 
+### Felipe e Miguel
+
+#### Corretiva:
+ - função adicionar_tarefa não estava adicionando tarefa (corrigido)
+ - função listar_tarefas não estava saindo quando a lista estava vazia (corrigido)
+
+#### Preventiva:
+ - função gerar_relatorio fazendo comparações desnecessarias (corrigido)
+ - função main com muitos if, mudei para switch (corrigido)
+
+#### Adaptativa:
+ - função listar_tarefas tem um for desnecesasrio (corrigido)
+ - função gerar_relatorio agora usa listar_tarefas_concluidas (corrigido)
+
+#### Evolutiva:
+ - função total_tarefa nome errado, agora é total_tarefas_concluidas (corrigido)
+ - função listar_tarefas_desnecessarias (corrigido)
+
 ## Como executar
 ```bash
 python main.py

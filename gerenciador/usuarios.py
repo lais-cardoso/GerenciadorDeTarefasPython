@@ -1,16 +1,20 @@
 usuarios = []
 
+
 def cadastrar_usuario(nome, senha):
     usuarios.append({"nome": nome, "senha": senha})
     print("Usuário cadastrado!")
+
 
 def autenticar(nome, senha):
     for u in usuarios:
         if u["nome"] == nome and u["senha"] == senha:
             print("Login bem-sucedido!")
             return True
+
     print("Usuário ou senha incorretos.")
     return False
+
 
 def listar_usuarios():
     print("Usuários cadastrados:")
