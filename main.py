@@ -1,47 +1,51 @@
 from gerenciador import tarefas, usuarios, relatorios
 
 def menu():
-    while True:
-        print("\n===== GERENCIADOR DE TAREFAS =====")
-        print("1. Adicionar tarefa")
-        print("2. Listar tarefas")
-        print("3. Concluir tarefa")
-        print("4. Remover tarefa")
-        print("5. Relatório")
-        print("6. Usuários")
-        print("0. Sair")
+  while True:
+    print("\n===== GERENCIADOR DE TAREFAS =====")
+    print("1. Adicionar tarefa")
+    print("2. Listar tarefas")
+    print("3. Concluir tarefa")
+    print("4. Remover tarefa")
+    print("5. Relatório")
+    print("6. Usuários")
+    print("7. Listar Usuários")
+    print("0. Sair")
 
-        opcao = input("Escolha: ")
+    opcao = input("Escolha: ")
 
-        if opcao == "1":
-            titulo = input("Título: ")
-            descricao = input("Descrição: ")
-            tarefas.adicionar_tarefa(titulo, descricao)
+    if opcao == "1":
+      titulo = input("Título: ")
+      descricao = input("Descrição: ")
+      tarefas.adicionar_tarefa(titulo, descricao)
 
-        elif opcao == "2":
-            tarefas.listar_tarefas()
+    elif opcao == "2":
+      tarefas.listar_tarefas()
 
-        elif opcao == "3":
-            indice = int(input("Número da tarefa: "))
-            tarefas.concluir_tarefa(indice)
+    elif opcao == "3":
+      indice = int(input("Número da tarefa: "))
+      tarefas.concluir_tarefa(indice)
 
-        elif opcao == "4":
-            indice = int(input("Número da tarefa: "))
-            tarefas.remover_tarefa(indice)
+    elif opcao == "4":
+      indice = int(input("Número da tarefa: "))
+      tarefas.remover_tarefa(indice)
 
-        elif opcao == "5":
-            relatorios.gerar_relatorio()
+    elif opcao == "5":
+      relatorios.gerar_relatorio()
 
-        elif opcao == "6":
-            nome = input("Nome: ")
-            senha = input("Senha: ")
-            usuarios.cadastrar_usuario(nome, senha)
-            usuarios.listar_usuarios()
+    elif opcao == "6":
+      nome = input("Nome: ")
+      senha = input("Senha: ")
+      usuarios.cadastrar_usuario(nome, senha)
+      usuarios.listar_usuarios()
 
-        elif opcao == "0":
-            print("Saindo...")
-            break
-        else:
-            print("Opção inválida.")
+    elif opcao == "7":
+      usuarios.listar_usuarios()
+
+    elif opcao == "0":
+      print("Saindo...")
+      break
+    else:
+      print("Opção inválida.")
 
 menu()
