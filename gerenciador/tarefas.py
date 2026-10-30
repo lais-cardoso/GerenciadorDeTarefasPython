@@ -1,29 +1,34 @@
-tarefas = []
+tarefas = [ {"titulo": "Estudar Python", "descricao": "Preciso estudar para codar", "concluida": "não"}]
 
 def adicionar_tarefa(titulo, descricao):
+    tarefas.append({
+        "titulo": titulo,
+        "descricao": descricao,
+        "concluida": "não"
+    })
     print(f"Tarefa '{titulo}' adicionada!")  
 
 def listar_tarefas():
     if len(tarefas) == 0:
         print("Nenhuma tarefa cadastrada.")
     for i, t in enumerate(tarefas):
-        print(f"{i+1}. {t['titulo']} - {'Concluída' if t['concluida'] else 'Pendente'}")
-    for i, t in enumerate(tarefas):
-        print(f"{i+1}. {t['titulo']} - {'Concluída' if t['concluida'] else 'Pendente'}")  
+        print(f"{i+1}. {t['titulo']} - Descrição: {t.get('descricao', 'Sem descrição')}")
+
 
 def concluir_tarefa(indice):
     try:
-        tarefas[indice]["concluida"] = "Sim"  
+        tarefas[indice-1]["concluida"] = "Sim"  
         print("Tarefa concluída!")
     except:
         print("Erro ao concluir tarefa.")
 
 def remover_tarefa(indice):
-    try:
-        tarefas.pop(indice)
-        print("Tarefa removida.")
-    except:
-        print("Erro: índice inválido.")
+    if indice < 1 or indice > len(tarefas):
+        print("Erro: número de tarefa inválido.")
+        return
+
+    tarefas.pop(indice - 1)
+    print("Tarefa removida.")
 
 def buscar_tarefa(titulo):
     for i, t in enumerate(tarefas):

@@ -19,3 +19,11 @@ Este projeto é um sistema simples de gerenciamento de tarefas.
 ## Como executar
 ```bash
 python main.py
+
+
+-# Mudanças
+
+- Corrigida a função adicionar_tarefa(), que não estava adicionando novas tarefas à lista.
+- Corrigida a função listar_tarefa(), que estava duplicando as tarefas e não mostrava a descrição
+-
+
