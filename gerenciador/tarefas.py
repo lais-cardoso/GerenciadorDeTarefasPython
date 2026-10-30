@@ -1,7 +1,16 @@
 tarefas = []
 
 def adicionar_tarefa(titulo, descricao):
-    print(f"Tarefa '{titulo}' adicionada!")  
+    tarefa = {
+        "titulo": titulo,
+        "descricao": descricao,
+        "concluida": 0
+    }
+
+    tarefas.append(tarefa)
+
+    print(f"Tarefa '{titulo}' adicionada!")
+
 
 def listar_tarefas():
     if len(tarefas) == 0:

@@ -9,6 +9,7 @@ def menu():
         print("4. Remover tarefa")
         print("5. Relatório")
         print("6. Usuários")
+        print("7. Listar Usuários")
         print("0. Sair")
 
         opcao = input("Escolha: ")
@@ -36,6 +37,9 @@ def menu():
             nome = input("Nome: ")
             senha = input("Senha: ")
             usuarios.cadastrar_usuario(nome, senha)
+
+        elif opcao == "7":
+            
             usuarios.listar_usuarios()
 
         elif opcao == "0":

@@ -19,3 +19,9 @@ Este projeto é um sistema simples de gerenciamento de tarefas.
 ## Como executar
 ```bash
 python main.py
+
+-# Alterações
+
+- Correção da função adicionar
+- Foi criada uma nova opção para listar o usuário (antes era possível ver os usuários criados apenas depois de criar um novo)
+- Na função "listar_usuarios():" agora exibe uma mensagem "Nenhum usuário cadastrado." caso nenhum usuário seja encontrado

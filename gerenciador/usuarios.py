@@ -13,6 +13,9 @@ def autenticar(nome, senha):
     return False
 
 def listar_usuarios():
-    print("Usuários cadastrados:")
-    for u in usuarios:
-        print("-", u["nome"])
+    if len(usuarios) == 0:
+        print("Nenhum usuário cadastrado.")
+    else:
+        print("Usuários cadastrados:")
+        for u in usuarios:
+            print("-", u["nome"])
