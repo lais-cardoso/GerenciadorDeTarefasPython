@@ -25,3 +25,11 @@ python main.py
 - Correção da função adicionar
 - Foi criada uma nova opção para listar o usuário (antes era possível ver os usuários criados apenas depois de criar um novo)
 - Na função "listar_usuarios():" agora exibe uma mensagem "Nenhum usuário cadastrado." caso nenhum usuário seja encontrado
+
+-# Bugs e alterações encontrados e suas classificações
+
+- A função adicionar tarefa não funciona (manutenção corretiva)
+
+- Nova opção para listar usuários (manutenção perfectiva)
+
+- É possível criar um usuário com o mesmo nome e senha (manutenção corretiva)
