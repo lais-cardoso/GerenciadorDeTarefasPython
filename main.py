@@ -11,7 +11,7 @@ def menu():
         print("6. Usuários")
         print("0. Sair")
 
-        opcao = input("Escolha: ")
+        opcao = input("Escolha ")
 
         if opcao == "1":
             titulo = input("Título: ")
@@ -40,7 +40,7 @@ def menu():
 
         elif opcao == "0":
             print("Saindo...")
-            break
+            
         else:
             print("Opção inválida.")
 
